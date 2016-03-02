@@ -13,10 +13,11 @@ namespace Moodle
     {
         #region 公共变量
         private String token = "e9369a3cd3ea23d7a280aa4ba61ed9ac";
-        private String DomianName = "http://192.168.1.103/webservice/rest/server.php";
+        private String DomianName = "http://192.168.1.104/webservice/rest/server.php";
         private String FunctionName = "";
         private String Parameters = "";
         #endregion
+
 
         /// <summary>
         /// 构造函数，传递函数名和函数参数
@@ -36,6 +37,7 @@ namespace Moodle
             
             Parameters=StringData.ToString();	 
         }
+
 
         /// <summary>
         /// 发送Post请求
