@@ -20,14 +20,19 @@ namespace Moodle
 
         private void button1_Click(object sender, EventArgs e)
         {
-            String FunctionName = "core_course_search_courses";
+            String FunctionName = "core_file_get_files";
             Hashtable Hash = new Hashtable();
-            Hash.Add("criterianame", "name");
-            Hash.Add("criteriavalue", "数据结构");
+            Hash.Add("criteria[0][key]","username");
+            Hash.Add("criteria[0][value]","admin");
             //Hash.Add("enrolments[0][courseid]", "4");
 
             Wskt WsktData = new Wskt(FunctionName,Hash);
             textBox1.Text = WsktData.SendRequest();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
